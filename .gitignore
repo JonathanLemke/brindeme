@@ -86,7 +86,7 @@
 /frontend/.pnpm-debug.log*
 
 # Environment files (optional to commit)
-/frontend/.env*
+# /frontend/.env*
 
 # Vercel deployment
 /frontend/.vercel/
