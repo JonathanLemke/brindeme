@@ -1,0 +1,126 @@
+# ========================================
+# Backend (Laravel)
+# ========================================
+
+# PHPUnit cache
+.phpunit.cache
+
+# Node modules
+/backend/node_modules/
+
+# Laravel public build and hot files
+/backend/public/build/
+/backend/public/hot/
+
+# Laravel public storage
+/backend/public/storage/
+
+# Laravel storage keys and pail
+/backend/storage/*.key
+/backend/storage/pail/
+
+# Composer dependencies
+/backend/vendor/
+
+# Environment variables
+/backend/.env
+/backend/.env.backup
+/backend/.env.production
+
+# PHPactor configuration
+/backend/.phpactor.json
+
+# PHPUnit result cache
+/backend/.phpunit.result.cache
+
+# Homestead configuration
+/backend/Homestead.json
+/backend/Homestead.yaml
+
+# Authentication and Fleet
+/backend/auth.json
+/backend/.fleet
+
+# IDE configurations
+/backend/.idea/
+/backend/.nova/
+/backend/.vscode/
+/backend/.zed/
+
+# ========================================
+# Frontend (React/Next.js)
+# ========================================
+
+# Node modules
+/frontend/node_modules/
+
+# Yarn PnP
+/frontend/.pnp
+/frontend/.pnp.*
+
+# Yarn directories
+/frontend/.yarn/*
+!/frontend/.yarn/patches
+!/frontend/.yarn/plugins
+!/frontend/.yarn/releases
+!/frontend/.yarn/versions
+
+# Coverage reports
+/frontend/coverage/
+
+# Next.js build output
+/frontend/.next/
+/frontend/out/
+
+# Production build
+/frontend/build/
+
+# Miscellaneous
+/frontend/.DS_Store
+/frontend/*.pem
+
+# Debug logs
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+/frontend/.pnpm-debug.log*
+
+# Environment files (optional to commit)
+/frontend/.env*
+
+# Vercel deployment
+/frontend/.vercel/
+
+# TypeScript build info
+/frontend/*.tsbuildinfo
+/frontend/next-env.d.ts
+
+# ========================================
+# Docker
+# ========================================
+
+# Docker MySQL data
+/docker/mysql/
+/docker/mysql/data/
+
+# Docker frontend node_modules (if applicable)
+/docker/frontend/node_modules/
+
+# ========================================
+# Outros Arquivos e Pastas Gerais
+# ========================================
+
+# Logs
+*.log
+
+# Locks
+*.lock
+
+# GitHub-specific
+.github/
+
+# Sistema Operacional
+.DS_Store
+
+# Arquivos PEM
+*.pem

@@ -1,0 +1,43 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: ./../backend
+      args:
+        UID: 1000     # Passar UID, # obs você pode pergar esses dados digitando id $USER no terminal
+        GID: 1000     # Passar GID  # eu coloco ele aqui para poder alterar os arquivos com permissão no docker
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mysql
+    environment:
+      DB_HOST: mysql
+      DB_DATABASE: brindeme
+      DB_USERNAME: bme_desafio
+      DB_PASSWORD: bme_desafio
+    volumes:
+      - ./../backend:/var/www/html
+
+  # frontend:
+  #   build: ./../frontend
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - backend
+  #   volumes:
+  #     - ./../frontend:/app
+
+  mysql:
+    image: mysql:8
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: brindeme
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: bme_desafio
+      MYSQL_PASSWORD: bme_desafio
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql:/var/lib/mysql
+      - ./sqls:/docker-entrypoint-initdb.d
